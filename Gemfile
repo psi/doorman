@@ -11,6 +11,7 @@ group :development do
   gem "shotgun"
   gem "foreman"
   gem "tux"
+  gem "rake"
 end
 
 group :testing do
