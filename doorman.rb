@@ -1,13 +1,12 @@
 require "sinatra"
-
-$ip_addresses = []
+require "doorman/offender"
 
 class Doorman < Sinatra::Application
   get "/" do
-    $ip_addresses.map { |ip| "deny #{ip};" }.join("\n")
+    Offender.blacklist
   end
 
   put "/track" do
-    $ip_addresses << params[:ip_address]
+    Offender.track(params[:ip_address], "scraping")
   end
 end

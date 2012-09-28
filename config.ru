@@ -1,5 +1,5 @@
-require "bouncer"
+require "doorman"
 
 use Rack::ShowExceptions
 
-run Bouncer.new
+run Doorman.new

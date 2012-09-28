@@ -15,7 +15,6 @@ describe Doorman do
     put "/track", {:ip_address => "10.10.0.1"}
 
     assert last_response.ok?
-    assert_equal last_response.body, "10.10.0.1"
   end
 
   it "lists abusive IPs" do
