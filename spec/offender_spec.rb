@@ -1,5 +1,5 @@
+require File.dirname(__FILE__) + '/spec_helper'
 require File.dirname(__FILE__) + '/../doorman/offender'
-require 'minitest/autorun'
 
 describe Offender do
   before do
