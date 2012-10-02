@@ -7,6 +7,6 @@ class Doorman < Sinatra::Application
   end
 
   put "/track" do
-    Offender.track(params[:ip_address], "scraping")
+    Offender.track(params[:ip_address], params[:incident_type])
   end
 end

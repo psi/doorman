@@ -24,7 +24,18 @@ class Offender < Ohm::Model
     offender.save
   end
 
+  def blacklisted?
+    case incident_type
+    when 'scraping/high_page_param'
+      if incident_count.to_i > 50 && Time.now - Time.parse(last_incident_at) < 5 * 86400
+        return true
+      end
+    end
+
+    return false
+  end
+
   def self.blacklist
-    all.map {|o| "deny #{o.ip_address};" }.join("\n")
+    all.select {|o| o.blacklisted? }.map {|o| "deny #{o.ip_address};" }.join("\n")
   end
 end
