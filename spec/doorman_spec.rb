@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/spec_helper'
-require File.dirname(__FILE__) + '/../doorman'
+require File.dirname(__FILE__) + '/../lib/doorman'
 require 'rack/test'
 
 ENV['RACK_ENV'] = 'test'
