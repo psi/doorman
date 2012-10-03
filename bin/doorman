@@ -9,6 +9,4 @@ rescue LoadError => e
   require 'doorman'
 end
 
-
-
 Doorman.run!
