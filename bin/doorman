@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+ENV['RACK_ENV'] ||= "production"
+
 begin
   require 'doorman'
 rescue LoadError => e
