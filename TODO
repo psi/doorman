@@ -1,0 +1,3 @@
+- If REDIS_URL is not defined, start a local redis-server
+- Consider a more efficient/concise storage method than using Ohm
+- Package as a gem

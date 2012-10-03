@@ -1,5 +1,13 @@
+PATH
+  remote: .
+  specs:
+    doorman (0.0.1)
+      ohm
+      sinatra (~> 1.3)
+      thin
+
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     bond (0.4.2)
     daemons (1.1.9)
@@ -51,12 +59,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  doorman!
   foreman
   minitest
-  ohm
   rack-test
   rake
   shotgun
-  sinatra (~> 1.3)
-  thin
   tux

@@ -1,18 +1,4 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-gem "sinatra", "~> 1.3"
-gem "thin"
-
-gem "ohm"
-
-group :development do
-  gem "shotgun"
-  gem "foreman"
-  gem "tux"
-  gem "rake"
-end
-
-group :testing do
-  gem "minitest"
-  gem "rack-test"
-end
+# Specify your gem's dependencies in doorman.gemspec
+gemspec
