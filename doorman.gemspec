@@ -8,9 +8,14 @@ Gem::Specification.new do |gem|
   gem.version       = Doorman::VERSION
   gem.authors       = ["JD Harrington"]
   gem.email         = ["jd@jdharrington.net"]
-  gem.description   = %q{This is the doorman}
+  gem.description   = <<-EOF
+    Doorman is a Sinatra application that lets you track IP addresses that are
+    engaging in potentially abusive activity, set rules for what constitutes a
+    ban, and then spits out a list of banned IP addresses suitable for including
+    in an nginx configuration file.
+  EOF
   gem.summary       = %q{This is the doorman}
-  gem.homepage      = ""
+  gem.homepage      = "http://github.com/psi/doorman"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
